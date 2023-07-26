@@ -17,4 +17,6 @@ public:
 
 	void Init();
 	void Update();
+
+	void proccessInput(GLFWwindow* window);
 };
