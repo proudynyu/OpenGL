@@ -6,16 +6,22 @@
 #include <fstream>
 #include <sstream>
 
-struct ShaderProgramSource
-{
-	std::string VertexSource;
-	std::string FragmentSource;
-};
+#include "Log.hpp"
 
-static class Shader
+class Shader
 {
 public:
-	static unsigned int CompileShader(const std::string& source, unsigned int type);
-	static unsigned int CreateShader(const std::string& vertexShader, const std::string& fragmentShader);
-	static ShaderProgramSource ParseShader(const std::string& file);
+	unsigned int ID;
+
+public:
+	Shader(const char* vertexPath, const char* fragmentPath);
+	void use();
+	void setBool(const std::string& name, bool value) const;
+	void setInt(const std::string& name, int value) const;
+	void setFloat(const std::string& name, float value) const;
+	unsigned int CompileShader(const std::string& source, unsigned int type);
+	void CreateShader(const std::string& vertexShader, const std::string& fragmentShader);
+
+private:
+	void checkCompileErrors(unsigned int shader, std::string type);
 };

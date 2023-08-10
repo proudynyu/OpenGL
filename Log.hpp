@@ -9,11 +9,11 @@ public:
 	};
 
 public:
-	void SetLevel(LogLevels level);
-	void Warn(const char* message);
-	void Error(const char* message);
-	void Info(const char* message);
+	static void SetLevel(LogLevels level);
+	static void Warn(const char* message);
+	static void Error(const char* message);
+	static void Info(const char* message);
 
 private:
-	LogLevels m_LogLevel = LEVEL_ERROR;
+	static LogLevels m_LogLevel;
 };

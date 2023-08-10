@@ -1,6 +1,8 @@
 #include "Log.hpp"
 #include <iostream>
 
+Log::LogLevels Log::m_LogLevel = Log::LEVEL_ERROR;
+
 void Log::SetLevel(LogLevels level) {
 	m_LogLevel = level;
 }
