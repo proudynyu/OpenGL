@@ -10,3 +10,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_subdirectories(app)
 add_subdirectories(engine)
+
+# need to see this
+add_subdirectories(res)

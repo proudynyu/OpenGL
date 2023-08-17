@@ -13,8 +13,8 @@ project "OpenGLProject"
     files { "main.cpp" }
 
     includedirs {
-        "vendors/glfw/include",
-        "vendors/glew/include"
+        "external/include/glfw",
+        "external/include/glew"
     }
 
     links {
@@ -37,6 +37,6 @@ project "OpenGLProject"
     filter {}
 
 group "Dependencies"
-    include "vendors/glfw"
-    include "vendors/glew"
+    include "external/include/glfw"
+    include "external/include/glew"
 
