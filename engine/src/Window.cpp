@@ -103,7 +103,7 @@ void Window::Update()
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
-	Shader shaderProgram("res/shaders/vertex/Basic.vertex", "res/shaders/fragment/Basic.frag");
+	Shader shaderProgram("res/shaders/vertex/basic.glsl", "res/shaders/fragment/basic.glsl");
 
 	while (!glfwWindowShouldClose(window))
 	{

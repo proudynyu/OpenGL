@@ -11,5 +11,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_subdirectories(app)
 add_subdirectories(engine)
 
-# need to see this
-add_subdirectories(res)
+configure_file(res/shaders/fragment/basic.frag res/shaders/fragment/basic.frag COPYONLY)
+configure_file(res/shaders/vertex/basic.vertex res/shaders/vertex/basic.vertex COPYONLY)
