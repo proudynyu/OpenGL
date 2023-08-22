@@ -5,8 +5,6 @@ unsigned int Shader::CompileShader(const std::string& source, unsigned int type)
 	unsigned int id = glCreateShader(type);
 
 	const char* src = source.c_str();
-	Log::SetLevel(Log::LEVEL_INFO);
-	Log::Info(source.c_str());
 
 	glShaderSource(id, 1, &src, nullptr);
 	glCompileShader(id);
@@ -80,8 +78,6 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath)
 		fragmentCode = fShaderStream.str();
 	}
 	catch (std::ifstream::failure error) {
-		Log::SetLevel(Log::LEVEL_ERROR);
-		Log::Error("FILE_NOT_SUCCESFULLY_READ\n");
 		std::cout << error.what() << std::endl;
 	}
 

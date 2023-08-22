@@ -6,8 +6,6 @@
 #include <fstream>
 #include <sstream>
 
-#include "Log.hpp"
-
 class Shader
 {
 public:
