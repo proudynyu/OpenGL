@@ -11,7 +11,7 @@
 
 class Texture {
 public:
-	Texture(const char* filename, GLenum format, bool flip_image = false);
+	Texture(const char* filename, GLenum format, bool flip_image = false, GLint param = GL_REPEAT);
 	~Texture();
 	void Load(GLenum tex);
 
